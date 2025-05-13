@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <!-- Servlet -->
+    <servlet>
+        <servlet-name>OnlineTimeServlet</servlet-name>
+        <servlet-class>Bai6.OnlineTimeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OnlineTimeServlet</servlet-name>
+        <url-pattern>/online</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter -->
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>Bai6.SessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>/online</url-pattern>
+    </filter-mapping>
+
+    <!-- Listener -->
+    <listener>
+        <listener-class>Bai6.SessionListener</listener-class>
+    </listener>
+</web-app>
